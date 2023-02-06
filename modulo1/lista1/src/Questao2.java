@@ -6,7 +6,7 @@ cidade e estado.
 
 import java.util.Scanner;
 
-public class QuestaoDois {
+public class Questao2 {
     public static void main(String[] args) {
         //Constantes:
         final String POPULACAO = "A cidade tem ";

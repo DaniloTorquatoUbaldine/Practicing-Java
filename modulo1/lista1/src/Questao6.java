@@ -6,7 +6,7 @@ os percentuais.
 
 import java.util.Scanner;
 
-public class QuestaoSeis {
+public class Questao6 {
     public static void main(String[] args) {
         //Constantes:
         final String QUANTIDADE_DE_VOTOS = "A quantidade de votos";

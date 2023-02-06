@@ -5,7 +5,7 @@ O algoritmo fornece a tradução de palavras.
 
 import java.util.Scanner;
 
-public class QuestaoTres {
+public class Questao3 {
     public static void main(String[] args) {
         //Constantes:
         final String TRADUCAO = "A tradução da palavra é ";

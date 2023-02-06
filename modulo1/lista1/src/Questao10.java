@@ -5,7 +5,7 @@ O algoritmo calcula o aproveitamento de um aluno.
 
 import java.util.Scanner;
 
-public class QuestaoDez {
+public class Questao10 {
     public static void main(String[] args) {
         //Constantes:
         final String IDENTIFICACAO = "O número de identificação do aluno é ";

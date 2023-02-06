@@ -6,7 +6,7 @@ e imprime as informações na tela.
 
 import java.util.Scanner;
 
-public class QuestaoUm {
+public class Questao1 {
     public static void main(String[] args) {
         //Constantes:
         final String SEU_NOME = "Olá seu nome é ";

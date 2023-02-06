@@ -5,7 +5,7 @@ O algoritmo calcula a duração de um jogo.
 
 import java.util.Scanner;
 
-public class QuestaoNove {
+public class Questao9 {
     public static void main(String[] args) {
         //Constantes:
         final String TEMPO_DE_DURACAO = "O tempo de duração do jogo foi de ";

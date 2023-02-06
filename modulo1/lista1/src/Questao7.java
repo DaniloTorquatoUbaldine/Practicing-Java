@@ -5,7 +5,7 @@ O algoritmo calcula o preço total.
 
 import java.util.Scanner;
 
-public class QuestaoSete {
+public class Questao7 {
     public static void main(String[] args) {
         //Constantes:
         final String ABCD = "ABCD";

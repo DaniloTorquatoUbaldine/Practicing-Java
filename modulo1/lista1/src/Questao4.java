@@ -2,7 +2,7 @@
 Essa classe é referente à quarta questão do módulo 1.
 O algoritmo fornece a tradução de palavras.
  */
-public class QuestaoQuatro {
+public class Questao4 {
     public static void main(String[] args) {
         //Constantes:
         final String A = "A é igual a ";

@@ -5,7 +5,7 @@ O algoritmo calcula o aumento no salário.
 
 import java.util.Scanner;
 
-public class QuestaoOito {
+public class Questao8 {
     public static void main(String[] args) {
         //Constantes:
         final String CENTO_E_UM = "101";
