@@ -26,38 +26,13 @@ public class Questao5 {
                 if (y == 2){
                     soma3 = soma3 + matriz[i][2];
                 }
-
             }
         }
-        //int y = 0;
-
-        //for (int i = 0; i < 10; i = i + 1){
-           // soma1 = soma1 + matriz[i][y];
-       // }
-        //media1 = soma1 / 10;
-       // y = 1;
-
-       // for (int i = 0; i < 10; i = i + 1){
-         //   soma2 = soma2 + matriz[i][y];
-       // }
-       // media2 = soma2 / 10;
-       // y = 2;
-
-       // for (int i = 0; i < 10; i = i + 1){
-         //   soma3 = soma3 + matriz[i][y];
-       // }
-
-
         double[] vetor = new double[10];
         vetor[0] = soma1;
         vetor[1] = soma2;
         vetor[2] = soma3;
-
-        System.out.println(soma1);
-        System.out.println(soma2);
-        System.out.println(soma3);
         int mercado = 0;
-
         if (soma1 < soma2 && soma1 < soma3){
             mercado = 1;
         }
@@ -67,11 +42,6 @@ public class Questao5 {
         if (soma3 < soma2 && soma3 < soma1){
             mercado = 3;
         }
-
-
-
-
         System.out.println("O mercado mais barato para comprar é o " + mercado + "°");
-
     }
 }

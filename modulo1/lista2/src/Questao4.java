@@ -14,21 +14,13 @@ public class Questao4 {
                     leitorDoUsuario.nextLine();
                     matriz[i][y] = valor;
                 }
-
-
             }
         }
-        //matriz[0][3] = (matriz[0][1] * 0.6) + (matriz[0][2] * 0.4);
-        //matriz[1][3] = (matriz[1][1] * 0.6) + (matriz[1][2] * 0.4);
-        //matriz[2][3] = (matriz[2][1] * 0.6) + (matriz[2][2] * 0.4);
-        //matriz[3][3] = (matriz[3][1] * 0.6) + (matriz[3][2] * 0.4);
-        //matriz[4][3] = (matriz[4][1] * 0.6) + (matriz[4][2] * 0.4);
         int y  = 3;
         double maiorNota = 0;
         int matricula  = -1;
         double media = 0;
         double soma = 0;
-
         for (int i = 0; i < 5; i = i + 1){
             if (matriz[i][y] > maiorNota){
                 maiorNota = matriz[i][y];
