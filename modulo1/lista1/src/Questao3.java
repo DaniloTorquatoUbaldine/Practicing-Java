@@ -12,14 +12,14 @@ public class Questao3 {
         final String PONTO = ".";
         //Variáveis:
         Scanner leitorDoUsuario = new Scanner(System.in);
-        System.out.println("Digite a palavra que deseja traduzir (letras minúsuclas)");
+        System.out.println("Digite a palavra que deseja traduzir (letras minúsuclas).");
         String palavra = leitorDoUsuario.nextLine();
         //O algoritmo irá tarduzir a palavra:
         if (palavra.equals("cachorro")){
             palavra = "dog";
             print(TRADUCAO, PONTO, palavra);
         } else if (palavra.equals("tempo")) {
-            palavra = "dog";
+            palavra = "time";
             print(TRADUCAO, PONTO, palavra);
         }else if (palavra.equals("amor")) {
             palavra = "love";
