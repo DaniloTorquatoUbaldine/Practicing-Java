@@ -24,8 +24,11 @@ public class ContaCorrente {
         return realizado;
     }
     public boolean depositar(double valor){
-        boolean realizado = true;
-        saldo = saldo + valor;
+        boolean realizado = false;
+        if (valor > 0) {
+            saldo = saldo + valor;
+            realizado = true;
+        }
         return realizado;
     }
     public double retornarSaldoComChequeEspecial(){
@@ -40,7 +43,7 @@ public class ContaCorrente {
         if (valor < total && valor > 0){
             saldo = saldo - valor;
             realizado = true;
-            conta.depositar(10);
+            conta.depositar(valor);
         } else{
             System.out.println("Não há saldo suficiente.");
         }
