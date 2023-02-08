@@ -42,6 +42,9 @@ public class Questao5 {
         if (soma3 < soma2 && soma3 < soma1){
             mercado = 3;
         }
-        System.out.println("O mercado mais barato para comprar é o " + mercado + "°");
+        System.out.println(soma1);
+        System.out.println(soma2);
+        System.out.println(soma3);
+        System.out.println("O mercado mais barato para comprar é o " + mercado +  "°");
     }
 }
