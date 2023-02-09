@@ -3,11 +3,8 @@ import java.awt.*;
 public class Cliente {
     private String nome;
     private String cpf;
-
     private Contato[] contatos = new Contato[2];
-    private Endereco endereco1 = new Endereco();
-    private Endereco endereco2 = new Endereco();
-    private Endereco[] enderecos = {endereco1, endereco2};
+    private Endereco[] enderecos = new Endereco[2];
     public void imprimirContatos(){
             for (Contato contato : contatos){
                 try{
@@ -49,22 +46,6 @@ public class Cliente {
 
     public void setContatos(Contato[] contatos) {
         this.contatos = contatos;
-    }
-
-    public Endereco getEndereco1() {
-        return endereco1;
-    }
-
-    public void setEndereco1(Endereco endereco1) {
-        this.endereco1 = endereco1;
-    }
-
-    public Endereco getEndereco2() {
-        return endereco2;
-    }
-
-    public void setEndereco2(Endereco endereco2) {
-        this.endereco2 = endereco2;
     }
 
     public Endereco[] getEnderecos() {

@@ -55,17 +55,6 @@ public class Main {
         contatos1[1].setTipo(2);
         contatos1[1].setTelefone("66666666");
         contatos1[1].imprimirContato();
-        cliente.setEndereco2(new Endereco());
-        Endereco endereco2 = cliente.getEndereco2();
-        endereco2.setLogradouro("Rua Exemplo");
-        endereco2.setNumero(10);
-        endereco2.setComplemento("Apartamento 2");
-        endereco2.setCep("22222222");
-        endereco2.setCidade("Campina Grande");
-        endereco2.setEstado("Paraíba");
-        endereco2.setPais("Brasil");
-        endereco2.setTipo(2);
-        endereco2.imprimirEndereco();
 
         int contato1Tipo= contatos1[0].getTipo();
         System.out.println(contato1Tipo);
@@ -91,16 +80,6 @@ public class Main {
         String endereco1Cidade =endereco1[0].getCidade();
         System.out.println(endereco1Cep + " " + endereco1Cidade + " " + endereco1estado + " " + endereco1Pais + " " + endereco1Logradouro + " " + endereco1Complemento + " "+ endereco1Numero + " tipo " +endereco1Tipo + endereco1Tipo );
 
-        int endereco2Tipo = endereco2.getTipo();
-        String endereco2Pais =endereco2.getPais();
-        String endereco2estado =endereco2.getEstado();
-        String endereco2Cep =endereco2.getCep();
-        int endereco2Numero =endereco2.getNumero();
-        String endereco2Complemento =endereco2.getComplemento();
-        String endereco2Logradouro =endereco2.getLogradouro();
-        String endereco2Cidade =endereco2.getCidade();
-        System.out.println(endereco2Cep + " " + endereco2Cidade + " " + endereco2estado + " " + endereco2Pais + " " + endereco2Logradouro + " " + endereco2Complemento + " "+ endereco2Numero + " tipo " + endereco2Tipo + endereco1Tipo );
-
         String cliente1 = cliente.getNome();
         System.out.println(cliente1);
         double saldoTotal = novaConta1.retornarSaldoComChequeEspecial();
@@ -123,6 +102,8 @@ public class Main {
         double saldoPoupanca31 = novaConta3.getSaldo();
         System.out.println(saldoPoupanca31);
 
+        //Testando deixar sem alguns atributos para ver o resultado. E testando deixar sem um dos objetos para ver o resultado com o try/catch.
+
         cliente.imprimirContatos();
 
         cliente.getContatos()[0] = new Contato();
@@ -136,6 +117,25 @@ public class Main {
         cliente.getContatos()[1].setTipo(2);
 
         cliente.imprimirContatos();
+
+        cliente.imprimirEnderecos();
+
+
+        cliente.getEnderecos()[0] = new Endereco();
+        cliente.getEnderecos()[0].setEstado("Paraíba");
+        cliente.getEnderecos()[0].setLogradouro("Rua Claudino Ramos Colaço");
+        cliente.getEnderecos()[0].setTipo(1);
+        cliente.getEnderecos()[0].setCep("777777777");
+        cliente.getEnderecos()[0].setCidade("Campina Grande");
+
+        cliente.getEnderecos()[1] = new Endereco();
+        cliente.getEnderecos()[1].setEstado("Pernambuco");
+        cliente.getEnderecos()[1].setLogradouro("Rua exemplo");
+        cliente.getEnderecos()[1].setTipo(2);
+        cliente.getEnderecos()[1].setCep("99999999");
+        cliente.getEnderecos()[1].setCidade("Recife");
+
+        cliente.imprimirEnderecos();
 
     }
 
