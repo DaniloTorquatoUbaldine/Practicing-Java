@@ -3,6 +3,24 @@ public class Main {
         testes();
     }
     public static void testes(){
+        Contato[] contatos1 = new Contato[2];
+        contatos1[0] = new Contato();
+        contatos1[0].setTipo(1);
+        contatos1[0].setTelefone("5555555");
+        contatos1[0].setDescricao("Contato residencial");
+
+        Endereco[] endereco1 = new Endereco[2];
+        endereco1[0] = new Endereco();
+        endereco1[0].setTipo(1);
+        endereco1[0].setPais("Brasil");
+        endereco1[0].setCidade("Campina Grande");
+        endereco1[0].setCep("Brasil");
+        endereco1[0].setLogradouro("Rua Claudino Ramos colaço");
+        endereco1[0].setNumero(21);
+        endereco1[0].setComplemento("Apartamento 10");
+        endereco1[0].setEstado("Paraíba");
+
+
         ContaCorrente novaConta1 = new ContaCorrente();
         ContaCorrente novaConta2 = new ContaCorrente();
         ContaPoupanca novaConta3 = new ContaPoupanca();
@@ -27,32 +45,16 @@ public class Main {
         String numero = novaConta1.getNumeroConta();
         System.out.println(numero);
         Cliente cliente = novaConta1.getCliente();
-        cliente.setContato1(new Contato());
-        Contato contato1 = cliente.getContato1();
-        contato1.setDescricao("Contato residencial");
-        contato1.setTipo(1);
-        contato1.setTelefone("5555555");
-        contato1.imprimirContato();
-        cliente.setEndereco1(new Endereco());
-        Endereco endereco1 = cliente.getEndereco1();
-        endereco1.setLogradouro("Rua Claudino Ramos colaço");
-        endereco1.setNumero(21);
-        endereco1.setComplemento("Apartamento 10");
-        endereco1.setCep("11111111");
-        endereco1.setCidade("Campina Grande");
-        endereco1.setEstado("Paraíba");
-        endereco1.setPais("Brasil");
-        endereco1.setTipo(1);
-        endereco1.imprimirEndereco();
+
+
         cliente.setNome("Danilo Torquato Ubaldine");
         cliente.setCpf("11111111111");
 
-        cliente.setContato2(new Contato());
-        Contato contato2 = cliente.getContato2();
-        contato2.setDescricao("Contato comercial");
-        contato2.setTipo(2);
-        contato2.setTelefone("66666666");
-        contato2.imprimirContato();
+        contatos1[1] = new Contato();
+        contatos1[1].setDescricao("Contato comercial");
+        contatos1[1].setTipo(2);
+        contatos1[1].setTelefone("66666666");
+        contatos1[1].imprimirContato();
         cliente.setEndereco2(new Endereco());
         Endereco endereco2 = cliente.getEndereco2();
         endereco2.setLogradouro("Rua Exemplo");
@@ -65,28 +67,28 @@ public class Main {
         endereco2.setTipo(2);
         endereco2.imprimirEndereco();
 
-        int contato1Tipo= contato1.getTipo();
+        int contato1Tipo= contatos1[0].getTipo();
         System.out.println(contato1Tipo);
-        String contato1Telefone = contato1.getTelefone();
+        String contato1Telefone = contatos1[0].getTelefone();
         System.out.println(contato1Telefone);
-        String contato1Descricao = contato1.getDescricao();
+        String contato1Descricao = contatos1[0].getDescricao();
         System.out.println(contato1Descricao);
 
-        int contato2Tipo= contato2.getTipo();
+        int contato2Tipo= contatos1[1].getTipo();
         System.out.println(contato2Tipo);
-        String contato2Telefone = contato2.getTelefone();
+        String contato2Telefone = contatos1[1].getTelefone();
         System.out.println(contato2Telefone);
-        String contato2Descricao = contato2.getDescricao();
+        String contato2Descricao = contatos1[1].getDescricao();
         System.out.println(contato2Descricao);
 
-        int endereco1Tipo = endereco1.getTipo();
-        String endereco1Pais =endereco1.getPais();
-        String endereco1estado =endereco1.getEstado();
-        String endereco1Cep =endereco1.getCep();
-        int endereco1Numero =endereco1.getNumero();
-        String endereco1Complemento =endereco1.getComplemento();
-        String endereco1Logradouro =endereco1.getLogradouro();
-        String endereco1Cidade =endereco1.getCidade();
+        int endereco1Tipo = endereco1[0].getTipo();
+        String endereco1Pais =endereco1[0].getPais();
+        String endereco1estado =endereco1[0].getEstado();
+        String endereco1Cep =endereco1[0].getCep();
+        int endereco1Numero =endereco1[0].getNumero();
+        String endereco1Complemento =endereco1[0].getComplemento();
+        String endereco1Logradouro =endereco1[0].getLogradouro();
+        String endereco1Cidade =endereco1[0].getCidade();
         System.out.println(endereco1Cep + " " + endereco1Cidade + " " + endereco1estado + " " + endereco1Pais + " " + endereco1Logradouro + " " + endereco1Complemento + " "+ endereco1Numero + " tipo " +endereco1Tipo + endereco1Tipo );
 
         int endereco2Tipo = endereco2.getTipo();
@@ -121,75 +123,19 @@ public class Main {
         double saldoPoupanca31 = novaConta3.getSaldo();
         System.out.println(saldoPoupanca31);
 
-        novaConta1.imprimir();
+        cliente.imprimirContatos();
 
+        cliente.getContatos()[0] = new Contato();
+        cliente.getContatos()[0].setDescricao("Conta comercial");
+        cliente.getContatos()[0].setTelefone("333333333");
+        cliente.getContatos()[0].setTipo(1);
 
-        //cliente.setContatos([contato1, contato2]);
-        //cliente.setEndereco1({endereco1, endereco2);
-//        novaConta1.cliente.nome = "Danilo Torquato Ubaldine";
-//        novaConta1.numeroConta = "123";
-//        novaConta1.agencia = 1;
-//        novaConta1.saldo = 100;
-//        novaConta1.chequeEspecial = 100;
-//        novaConta1.cliente.cpf = "11111111111";
-//
-//        ContaCorrente novaConta2 = new ContaCorrente();
-//        novaConta2.cliente.nome = "Joao Augusto";
-//        novaConta2.numeroConta = "124";
-//        novaConta2.agencia = 2;
-//        novaConta2.saldo = 50;
-//        novaConta2.chequeEspecial = 50;
-//        novaConta2.cliente.cpf = "22222222222";
-//
-//        novaConta1.cliente.contato1.descricao = "Contato residencial";
-//        novaConta1.cliente.contato1.telefone = "555555555";
-//        novaConta1.cliente.contato1.tipo = 1;
-//
-//        novaConta1.cliente.contato2.descricao = "Contato comercial";
-//        novaConta1.cliente.contato2.telefone = "888888888";
-//        novaConta1.cliente.contato2.tipo = 2;
-//
-//        novaConta1.cliente.endereco1.tipo = 1;
-//        novaConta1.cliente.endereco1.logradouro = "Rua Claudino Ramos colaço";
-//        novaConta1.cliente.endereco1.numero = 21;
-//        novaConta1.cliente.endereco1.complemento = "Apartamento 201";
-//        novaConta1.cliente.endereco1.cep = "22222222";
-//        novaConta1.cliente.endereco1.cidade = "Campina Grande";
-//        novaConta1.cliente.endereco1.estado = "Paraíba";
-//        novaConta1.cliente.endereco1.pais = "Brasil";
-//
-//        novaConta1.cliente.endereco2.tipo = 2;
-//        novaConta1.cliente.endereco2.logradouro = "Rua Exemplo";
-//        novaConta1.cliente.endereco2.numero = 10;
-//        novaConta1.cliente.endereco2.complemento = "10° andar";
-//        novaConta1.cliente.endereco2.cep = "33333333";
-//        novaConta1.cliente.endereco2.cidade = "Campina Grande";
-//        novaConta1.cliente.endereco2.estado = "Paraíba";
-//        novaConta1.cliente.endereco2.pais = "Brasil";
-//
-//        novaConta1.cliente.imprimirContatos();
-//        novaConta1.cliente.imprimirEnderecos();
-//
-//        novaConta1.cliente.contato1.imprimirContato();
-//        novaConta1.cliente.endereco1.imprimirEndereco();
-//
-//        double total = novaConta1.retornarSaldoComChequeEspecial();
-//        System.out.println(total);
-//
-//        boolean tentarSacer = novaConta1.sacar(150);
-//        System.out.println(tentarSacer);
-//        System.out.println(novaConta1.saldo);
-//
-//        boolean tentarDepositar = novaConta1.depositar(100);
-//        System.out.println(tentarDepositar);
-//        System.out.println(novaConta1.saldo);
-//
-//        boolean tentarTransferir = novaConta1.transferir(novaConta2, 10);
-//        System.out.println(tentarTransferir);
-//        System.out.println(novaConta1.saldo);
-//        System.out.println(novaConta2.saldo);
-//
-//        novaConta1.cliente.imprimirCliente();
+        cliente.getContatos()[1] = new Contato();
+        cliente.getContatos()[1].setDescricao("Conta residencial");
+        cliente.getContatos()[1].setTelefone("777777777");
+        cliente.getContatos()[1].setTipo(2);
+
+        cliente.imprimirContatos();
 
     }
 
