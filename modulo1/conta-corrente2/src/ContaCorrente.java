@@ -1,9 +1,5 @@
 public class ContaCorrente extends Conta implements Impressao{
-    //public Cliente cliente = new Cliente();
-    //public String numeroConta;
-    //public int agencia;
     private double chequeEspecial;
-    //public double chequeEspecial;
 
 
     public void setChequeEspecial(double valor){
