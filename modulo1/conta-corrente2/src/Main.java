@@ -53,7 +53,7 @@ public class Main {
         contatos1[1] = new Contato();
         contatos1[1].setDescricao("Contato comercial");
         contatos1[1].setTipo(2);
-        contatos1[1].setTelefone("66666666");
+        contatos1[1].setTelefone("3333333");
         contatos1[1].imprimirContato();
 
         int contato1Tipo= contatos1[0].getTipo();
