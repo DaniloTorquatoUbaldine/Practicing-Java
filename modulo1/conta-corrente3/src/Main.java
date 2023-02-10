@@ -13,13 +13,17 @@ public class Main {
         conta1.setAgencia("123");
         Cliente cliente = new Cliente();
         conta1.setCliente(cliente);
-        cliente.getContatos().add(new Contato());
+        //cliente.getContatos().add(new Contato());
+        Contato contato1 = new Contato();
+        Contato contato2 = new Contato();
+        ArrayList<Contato> contatos = new ArrayList<>();
+        contatos.add(contato1);
+        contatos.add(contato2);
+        cliente.setContatos(contatos);
         cliente.getContatos().get(0).setTelefone("55555777777");
         cliente.getContatos().get(0).setTipo(1);
         cliente.getContatos().get(0).setDescricao("contato residencial");
 
-        ArrayList<Contato> contatos= cliente.getContatos();
-        cliente.setContatos(contatos);
         cliente.imprimirContatos();
 
         ContaCorrente conta2 = new ContaCorrente();
